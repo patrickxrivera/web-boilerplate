@@ -1,7 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useMemberByAddressQuery } from '../generated/graphql'
 
 function Home() {
+  const {
+    data: memberByAddressData,
+    loading,
+    error,
+  } = useMemberByAddressQuery({
+    variables: {
+      address: '0x942cBEa64876Ff0b2e23c0712B37Dc0091804e9c',
+    },
+  })
+
+  // eslint-disable-next-line no-console
+  console.log({ memberByAddressData, loading, error })
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>

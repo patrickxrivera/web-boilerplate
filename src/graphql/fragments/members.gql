@@ -1,0 +1,16 @@
+fragment memberDetails on Member {
+  id
+  address
+  username
+  usernameFormatted
+  displayName
+}
+
+fragment memberPayloadDetails on MemberPayload {
+  member {
+    ...memberDetails
+  }
+  error {
+    ...userErrorDetails
+  }
+}

@@ -1,0 +1,5 @@
+query MemberByAddress($address: String!) {
+  memberByAddress(address: $address) {
+    ...memberPayloadDetails
+  }
+}
