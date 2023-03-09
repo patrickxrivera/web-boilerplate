@@ -5,6 +5,8 @@ import { ApolloProvider } from '@apollo/client'
 import { client } from '../utils/apollo'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  // const dummyWallet = 'alex.eth'
+  // const votesRemaining = 3
   return (
     <ApolloProvider client={client}>
       <Component {...pageProps} />
